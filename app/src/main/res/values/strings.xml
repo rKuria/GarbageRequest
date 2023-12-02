@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GarbageApp1</string>
+    <string name="Username">Enter username</string>
+    <string name="Email">Enter email</string>
+    <string name="Password">Enter password</string>
+</resources>
