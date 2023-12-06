@@ -96,16 +96,36 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
     <Button
-        android:id="@+id/btn_Login"
+        android:id="@+id/btn_SignUp"
         android:layout_width="124dp"
         android:layout_height="70dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="52dp"
         android:layout_marginBottom="64dp"
-        android:text="Submit"
+        android:text="Sign Up"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <RadioButton
+        android:id="@+id/res_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Resident"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <RadioButton
+        android:id="@+id/comp_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:text="Company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/res_but" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
