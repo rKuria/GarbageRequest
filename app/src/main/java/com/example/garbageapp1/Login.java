@@ -1,7 +1,6 @@
 package com.example.garbageapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Entity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        email = findViewById(R.id.et_uname);
+        email = findViewById(R.id.et_gmail);
         password = findViewById(R.id.et_pass);
         btn_login = findViewById(R.id.btn_Login);
 
