@@ -46,7 +46,11 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
                 UserModel userModel;
 
+                Toast.makeText(SignUp.this, "Clicked", Toast.LENGTH_SHORT).show();
+
                 try {
+
+                    Toast.makeText(SignUp.this, "Trying", Toast.LENGTH_SHORT).show();
                     userModel = new UserModel(-1, et_name.getText().toString(), et_email.getText().toString(), et_password.getText().toString());
                 }
                 catch (Exception e){
@@ -57,7 +61,15 @@ public class SignUp extends AppCompatActivity {
                 DbHelper dbHelper = new DbHelper(SignUp.this);
 
                 boolean success = dbHelper.addOne(userModel);
-                Toast.makeText(SignUp.this, "Success",Toast.LENGTH_SHORT);
+                if(success){
+
+                    Toast.makeText(SignUp.this, "User created", Toast.LENGTH_SHORT).show();
+                }
+                else{
+
+                    Toast.makeText(SignUp.this, "Fail to create user", Toast.LENGTH_SHORT).show();
+                }
+//                Toast.makeText(SignUp.this, "Success",Toast.LENGTH_SHORT);
 
             }
         });

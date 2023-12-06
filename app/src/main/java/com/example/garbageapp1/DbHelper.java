@@ -2,6 +2,7 @@ package com.example.garbageapp1;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -22,7 +23,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //called each time the db is accessed
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + USER_TABLE + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT)";
+        String createTableStatement = "CREATE TABLE " + USER_TABLE + "("  + COLUMN_USER_NAME + " TEXT , " + COLUMN_USER_EMAIL + " TEXT PRIMARY KEY, " + COLUMN_USER_PASSWORD + " TEXT)";
 
         db.execSQL(createTableStatement);
 
@@ -50,5 +51,32 @@ public class DbHelper extends SQLiteOpenHelper {
             return true;
         }
 
+    }
+
+    public boolean login(String email, String password){
+
+        Cursor cursor;
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("email", email);
+        cv.put("password",password);
+
+        System.out.println(email);
+        System.out.println(password);
+
+//        cursor = db.rawQuery("SELECT * FROM " + USER_TABLE + " WHERE USER_EMAIL = ? AND USER_PASSWORD = ?", new String[] {email,password});
+//        cursor = db.rawQuery("SELECT * FROM USER_TABLE WHERE USER_EMAIL = ? AND USER_PASSWORD = ?", new String[] {email,password});
+        cursor = db.rawQuery("SELECT * FROM USER_TABLE WHERE USER_EMAIL = ? AND USER_PASSWORD = ?",new String[] {email,password});
+//        cursor = db.rawQuery("SELECT * FROM USER_TABLE",null);
+//        cursor = db.execSQL("SELECT * FROM USER_TABLE WHERE USER_EMAIL = " + email + " AND USER_PASSWORD = ?");
+
+        System.out.println("///////////////////////////////////////////////////////////");
+        System.out.println(cursor.getCount());
+        if(cursor.getCount()>0){
+            return true;
+        }
+        else{
+            return  false;
+        }
     }
 }
