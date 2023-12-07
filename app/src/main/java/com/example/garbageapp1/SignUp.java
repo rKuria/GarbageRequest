@@ -38,6 +38,7 @@ public class SignUp extends AppCompatActivity {
         tv_name = findViewById(R.id.tv_name);
         tv_email = findViewById(R.id.tv_email);
         tv_password = findViewById(R.id.tv_password);
+       // res_but = findViewById(R.id.res_but);
 
 
         //button listeners

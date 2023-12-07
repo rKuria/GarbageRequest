@@ -5,4 +5,7 @@
     <string name="Password">Enter password</string>
     <string name="LoginEmail">Enter email</string>
     <string name="LoginPassword">Enter password</string>
+    <string name="OrderName">Enter your full name</string>
+    <string name="Location">Enter your location</string>
+    <string name="MobileNumber">Enter your mobile number</string>
 </resources>

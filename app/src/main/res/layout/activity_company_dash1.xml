@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/garbage" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/c_dashHead"
         android:layout_width="295dp"
         android:layout_height="63dp"
         android:layout_marginStart="30dp"
@@ -57,7 +57,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/c_dashHead" />
 
     <ImageView
         android:id="@+id/imageView5"

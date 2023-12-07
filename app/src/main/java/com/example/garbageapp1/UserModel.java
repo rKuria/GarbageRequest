@@ -11,13 +11,17 @@ public class UserModel {
     private String password;
 
 
+    private Boolean type;
+
+
     //then the constructors
 
-    public UserModel(int id, String username, String email, String password) {
+    public UserModel(int id, String username, String email, String password, Boolean type ) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.type = type;
     }
 
     //non parameterized constructor
@@ -36,6 +40,7 @@ public class UserModel {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 
@@ -72,5 +77,13 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Boolean getType() {
+        return type;
+    }
+
+    public void setType(Boolean type) {
+        this.type = type;
     }
 }
