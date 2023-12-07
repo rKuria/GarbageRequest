@@ -1,5 +1,6 @@
 package com.example.garbageapp1;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -31,6 +32,24 @@ public class DbHelper2 extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
+    public Boolean addOrder(Orders orders){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_USERNAME, orders.getUsername());
+        cv.put(COLUMN_LOCATION, orders.getLocation());
+        cv.put(COLUMN_NUMBER, orders.getMobile());
+
+        long insert = db.insert (ORDER_TABLE, null, cv);
+        if (insert==-1){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+
 
 
 }
