@@ -16,6 +16,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_USER_EMAIL = "USER_EMAIL";
     public static final String COLUMN_USER_PASSWORD = "USER_PASSWORD";
 
+
     public DbHelper(@Nullable Context context) {
         super(context, "user.db", null, 1 );
     }
@@ -23,7 +24,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //called each time the db is accessed
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + USER_TABLE + "("  + COLUMN_USER_NAME + " TEXT , " + COLUMN_USER_EMAIL + " TEXT PRIMARY KEY, " + COLUMN_USER_PASSWORD + " TEXT)";
+        String createTableStatement = "CREATE TABLE " + USER_TABLE + "("  + COLUMN_USER_NAME + " TEXT , " + COLUMN_USER_EMAIL + " TEXT PRIMARY KEY, " + COLUMN_USER_PASSWORD + "TEXT)";
 
         db.execSQL(createTableStatement);
 
@@ -66,7 +67,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
 //        cursor = db.rawQuery("SELECT * FROM " + USER_TABLE + " WHERE USER_EMAIL = ? AND USER_PASSWORD = ?", new String[] {email,password});
 //        cursor = db.rawQuery("SELECT * FROM USER_TABLE WHERE USER_EMAIL = ? AND USER_PASSWORD = ?", new String[] {email,password});
-        cursor = db.rawQuery("SELECT * FROM USER_TABLE WHERE USER_EMAIL = ? AND USER_PASSWORD = ?",new String[] {email,password});
+          cursor = db.rawQuery("SELECT * FROM USER_TABLE WHERE USER_EMAIL = ? AND USER_PASSWORD = ?",new String[] {email,password});
 //        cursor = db.rawQuery("SELECT * FROM USER_TABLE",null);
 //        cursor = db.execSQL("SELECT * FROM USER_TABLE WHERE USER_EMAIL = " + email + " AND USER_PASSWORD = ?");
 

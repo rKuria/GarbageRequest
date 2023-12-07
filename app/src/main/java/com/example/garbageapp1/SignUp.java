@@ -38,7 +38,8 @@ public class SignUp extends AppCompatActivity {
         tv_name = findViewById(R.id.tv_name);
         tv_email = findViewById(R.id.tv_email);
         tv_password = findViewById(R.id.tv_password);
-       // res_but = findViewById(R.id.res_but);
+        //res_but = findViewById(R.id.res_but);
+        //comp_but = findViewById(R.id.comp_but);
 
 
         //button listeners
@@ -50,13 +51,12 @@ public class SignUp extends AppCompatActivity {
                 Toast.makeText(SignUp.this, "Clicked", Toast.LENGTH_SHORT).show();
 
                 try {
-
-                    Toast.makeText(SignUp.this, "Trying", Toast.LENGTH_SHORT).show();
                     userModel = new UserModel(-1, et_name.getText().toString(), et_email.getText().toString(), et_password.getText().toString());
+                    Toast.makeText(SignUp.this, "Trying", Toast.LENGTH_SHORT).show();
                 }
                 catch (Exception e){
                     Toast.makeText(SignUp.this, "Fail", Toast.LENGTH_SHORT).show();
-                    userModel = new UserModel(-1, "fail", "none", "none");
+                    userModel = new UserModel(-1, "none", "none", "none");
                 }
 
                 DbHelper dbHelper = new DbHelper(SignUp.this);

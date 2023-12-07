@@ -16,7 +16,7 @@ public class UserModel {
 
     //then the constructors
 
-    public UserModel(int id, String username, String email, String password, Boolean type ) {
+    public UserModel(int id, String username, String email, String password ) {
         this.id = id;
         this.username = username;
         this.email = email;
