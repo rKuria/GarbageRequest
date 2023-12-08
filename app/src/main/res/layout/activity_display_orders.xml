@@ -7,10 +7,10 @@
     tools:context=".DisplayOrders">
 
     <View
-        android:id="@+id/view7"
+        android:id="@+id/view6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#243743"
+        android:background=" #243743"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +30,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:id="@+id/view_All"
         android:layout_width="409dp"
         android:layout_height="654dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:background="#28B78D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

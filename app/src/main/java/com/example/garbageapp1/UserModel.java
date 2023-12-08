@@ -10,13 +10,14 @@ public class UserModel {
 
     private String password;
 
+    private  String type;
 
-    private Boolean type;
+
 
 
     //then the constructors
 
-    public UserModel(int id, String username, String email, String password ) {
+    public UserModel(int id, String username, String email, String password, String type ) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -40,7 +41,6 @@ public class UserModel {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", type='" + type + '\'' +
                 '}';
     }
 
@@ -79,11 +79,7 @@ public class UserModel {
         this.password = password;
     }
 
-    public Boolean getType() {
-        return type;
-    }
 
-    public void setType(Boolean type) {
-        this.type = type;
-    }
+    public String getType() { return type;}
+
 }

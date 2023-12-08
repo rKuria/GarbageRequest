@@ -16,13 +16,17 @@
             android:name=".DisplayOrders"
             android:exported="false" />
         <activity
-            android:name=".Orders"
+            android:name=".OrdersModel"
             android:exported="false" />
         <activity
             android:name=".UserDash1"
             android:exported="false" />
         <activity
             android:name=".CompanyDash1"
+            android:exported="false" />
+
+        <activity
+            android:name=".Orders"
             android:exported="false" />
         <activity
             android:name=".HomePage"

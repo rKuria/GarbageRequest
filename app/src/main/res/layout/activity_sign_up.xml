@@ -14,8 +14,10 @@
         android:background="#29AB87"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_heading"
@@ -117,33 +119,71 @@
         android:id="@+id/btn_SignUp"
         android:layout_width="175dp"
         android:layout_height="57dp"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="52dp"
         android:layout_marginBottom="64dp"
         android:text="Sign Up"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <RadioButton
-        android:id="@+id/res_but"
-        android:layout_width="129dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
-        android:text="Resident"
-        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
-
-    <RadioButton
-        android:id="@+id/comp_but"
-        android:layout_width="130dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="37dp"
-        android:text="Company"
+    <Switch
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/res_but" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="467dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resident"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="472dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+    <!--    <RadioGroup-->
+<!--        android:id="@+id/rgTypes"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+<!--&lt;!&ndash;        tools:layout_editor_absoluteX="190dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        tools:layout_editor_absoluteY="482dp" >&ndash;&gt;-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/r_btn1"-->
+<!--            android:layout_width="233dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:text="Resident"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.511"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:layout_editor_absoluteY="441dp" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/r_btn2"-->
+<!--            android:layout_width="235dp"-->
+<!--            android:layout_height="49dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="Company"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/r_btn1"-->
+<!--            app:layout_constraintVertical_bias="0.059"-->
+<!--            tools:layout_editor_absoluteX="91dp" />-->
+
+
+<!--    </RadioGroup>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,7 @@ public class DbHelper2 extends SQLiteOpenHelper {
 
     }
 
-    public Boolean addOrder(Orders orders){
+    public Boolean addOrder(OrdersModel orders){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_USERNAME, orders.getUsername());
